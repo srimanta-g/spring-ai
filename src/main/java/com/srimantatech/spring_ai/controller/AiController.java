@@ -1,5 +1,6 @@
 package com.srimantatech.spring_ai.controller;
 
+import com.srimantatech.spring_ai.advisor.SimpleLoggerAdvisor;
 import com.srimantatech.spring_ai.entity.Genre;
 import org.springframework.ai.chat.client.ChatClient;
 import org.springframework.core.ParameterizedTypeReference;
@@ -14,7 +15,9 @@ public class AiController {
     private final ChatClient client;
 
     public AiController (ChatClient.Builder chatClientBuilder) {
-        this.client = chatClientBuilder.build();
+        this.client = chatClientBuilder
+                .defaultAdvisors(new SimpleLoggerAdvisor())
+                .build();
     }
 
     @GetMapping("/prompt")
