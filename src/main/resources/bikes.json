@@ -1,0 +1,14 @@
+[
+  {
+    "description": "Mountain bike for rough terrain",
+    "context": "Suitable for trail riding and rocky paths"
+  },
+  {
+    "description": "Road bike designed for speed",
+    "context": "Lightweight frame optimized for paved roads"
+  },
+  {
+    "description": "Hybrid bike",
+    "context": "Combination of road and mountain bike features"
+  }
+]

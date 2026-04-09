@@ -9,7 +9,7 @@ import org.springframework.ai.chat.client.advisor.api.CallAdvisorChain;
 
 public class SimpleLoggerAdvisor implements CallAdvisor {
 
-    private Logger logger = LoggerFactory.getLogger(SimpleLoggerAdvisor.class);
+    private final Logger logger = LoggerFactory.getLogger(SimpleLoggerAdvisor.class);
 
     @Override
     public ChatClientResponse adviseCall(ChatClientRequest chatClientRequest, CallAdvisorChain callAdvisorChain) {
