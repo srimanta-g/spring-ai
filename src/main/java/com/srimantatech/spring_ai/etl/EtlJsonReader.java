@@ -20,7 +20,7 @@ public class EtlJsonReader {
     }
 
     public List<Document> loadJsonAsDocument () {
-        JsonReader jsonReader = new JsonReader(this.resource, "description", "context");
+        JsonReader jsonReader = new JsonReader(this.resource, "description", "context", "bikeName");
         return jsonReader.get();
     }
 
